@@ -7,6 +7,7 @@ connectDB();    // Connect Database
 
 //Middleware
 app.use(express.json({ extended:false }));    // parse json objects in requests - this is the middleware formerly known as body-parser
+app.use(express.urlencoded({ extended: true }));    // makes form content into json format
 
 //Routing
 app.get('/', (req, res) => res.send('API Running')); // When the server receives a GET request from a url ending with /, send a response with data content 'API Running'
